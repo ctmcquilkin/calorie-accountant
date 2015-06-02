@@ -1,17 +1,46 @@
 div.ca-app-content
-  h1 Calorie Accountant
+.redBorder
+.greenBorder
+.yellowBorder
+.container
+    header.clearfix
+        span Your
+        h1 Food Diary
+        nav
+          a#test.icon-arrow-left(href='FitnessAppHome.html', data-info='back home') Back Home
+    .main
+        ul.cbp_tmtimeline.add_form
+          li
+            time.cbp_tmtime(datetime='2013-04-11T12:04')
+              span 4/11/13
+              |  
+              span Now
+            .cbp_tmicon.cbp_tmicon-screen
+            .cbp_tmlabel
+              form
+                input#entrydate(type='hidden', name='entrydate', value='0')
+                |                                 
+                input#nameInput(type='text', placeholder='Food Name')
+                |                                 
+                input#caloriesInput(type='number', placeholder='Calories', ng-model='ctrl.newItem.value')
+                |                                 
+                button(ng-click='ctrl.addNewItem()')#add Add
+        |                 
+        ul#diaryUL.cbp_tmtimeline
 
-  input(type="text"
-        ng-model="ctrl.newItem.value")
-  select(ng-model="ctrl.newItem.type" ng-options="type.label for type in ctrl.types")
-    option(value="") choose a type
-  button(ng-click="ctrl.addNewItem()") Add Item
+//  h1 Calorie Accountant
 
-  ul
-    li(ng-repeat="item in ctrl.items")
-      div
-        | Type 
-        span(ng-bind="item.type.label")
-      div
-        | Value 
-        span(ng-bind="item.value")
+//  input(type="text"
+//        ng-model="ctrl.newItem.value")
+//  select(ng-model="ctrl.newItem.type" ng-options="type.label for type in ctrl.types")
+//    option(value="") choose a type
+//  button(ng-click="ctrl.addNewItem()") Add Item
+//
+//  ul
+//    li(ng-repeat="item in ctrl.items")
+//      div
+//        | Type 
+//        span(ng-bind="item.type.label")
+//      div
+//        | Value 
+//        span(ng-bind="item.value")
