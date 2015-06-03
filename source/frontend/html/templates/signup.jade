@@ -2,6 +2,8 @@ div.ca-app-content
   form.ca-form.floating-labels
       fieldset
           legend Sign Up
+          //.error-message(ng-show='input#ca-email.email.$ng-touched && input#ca-email.email.$invalid')
+            p Please enter a valid email address
           .icon
             label.ca-label(for='ca-email') Email
             input#ca-email.email(type='email', ng-model="ctrl.user.email", name='ca-email', placeholder="email", required='')
