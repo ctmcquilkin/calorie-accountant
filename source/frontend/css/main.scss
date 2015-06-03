@@ -533,6 +533,7 @@ Form
   }
 
   .error-message p {
+  	display: none;
     background: $color-5;
     color: $color-4;
     font-size: 1.4rem;
@@ -756,6 +757,7 @@ a:hover {
 .container > header nav {
 	float: right;
 }
+/* 
 
 .container > header nav a {
 	display: block;
@@ -820,6 +822,7 @@ a:hover {
 .icon-arrow-left:before {
 	content: "\f060";
 }
+ */
 @font-face {
 	font-family: 'ecoico';
 	src:url('../fonts/timelineicons/ecoico.eot');
@@ -1132,5 +1135,43 @@ a.login {
 	}	
     .add_form input[type="number"] { left:40%; }
     .add_form input[type="number"] { width:50%; }
+}
+
+/* User Profile Button */
+.button {
+  display: inline-block;
+  padding-left: 2em;
+  background-color: #6CBFEE;
+  color: #f2f2f2;
+  margin: 2em 0 2em 2em;
+  font-weight: 700;
+  text-decoration: none;
+  position: relative;
+  border-radius: 5px;
+  
+  &:before { // triangle
+    content: "";
+    display: block;
+    position: absolute;
+    top: 1em;
+    right: 3.05em;
+    height: 0;
+    width: 0;
+    border-top: 0.75em solid transparent;
+    border-bottom: 0.75em solid transparent;
+    border-left: 0.5em solid #6CBFEE;
+  }
+  
+  &:after { // profile image
+    content: "";
+    width: 3.5em;
+    height: 3.5em;
+    margin-left: 1em;
+    display: inline-block;
+    vertical-align: middle;
+    background: url(http://www.fillmurray.com/g/124/124) no-repeat center;
+    background-size: cover;
+    border-radius: 5px;
+  }
 }
 
