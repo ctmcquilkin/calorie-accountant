@@ -7,7 +7,7 @@ div.ca-app-content
         span Your
         h1 Food Diary
         nav
-          //a#test.icon-arrow-left(href='#profile', data-info='visit your profile') Visit Your Profile
+          //a#test.icon-arrow-left(href='#profile', data-info='visit your profile') Log out
           //a#open-popup.button(href='#/profile')
             //| View my profile
           ul#people
@@ -37,6 +37,10 @@ div.ca-app-content
                 button(ng-click='ctrl.addNewItem()')#add Add
         |                 
         ul#diaryUL.cbp_tmtimeline
+          li(ng-repeat="item in ctrl.items")
+            .cbp_tmlabel
+                h1(ng-bind="item.value")
+                h2(ng-bind="item.type.label")
 
 //  h1 Calorie Accountant
 
